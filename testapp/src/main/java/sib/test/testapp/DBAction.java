@@ -25,8 +25,8 @@ public class DBAction{
 	}
 	
 	public void connection() {
-		context = new ClassPathXmlApplicationContext("context.xml");
-        jdbcTemplate = context.getBean(JdbcTemplate.class);
+		context = new ClassPathXmlApplicationContext("file:src/main/res/context.xml");
+		jdbcTemplate = context.getBean(JdbcTemplate.class);
 	}
 	
 	public void inserContent() {
