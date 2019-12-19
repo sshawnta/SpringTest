@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:=http://www.w3.org/1999/xhtml>
+<head>
+	{{> meta}}
+	<title>Вы авторизованны</title>
+</head>
+<body>
+<section class="container">
+	<div class="my-3" align="center">
+		<h3>Все нормально {{#user}}{{name}}{{/user}}</h3>
+		<form action="/logout" method="post">
+			<input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+			<input class="button" type="submit" value="Выйти"/>
+		</form>
+	
+</body>
+</html>
